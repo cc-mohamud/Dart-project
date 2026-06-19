@@ -2,8 +2,7 @@ import 'dart:io';
 
 void main() async{
   File file = File("Notes.txt");
+  String content = await file.readAsString();
 
-  await file.create();
-
-  print("file is created");
+  print(content);
 }
