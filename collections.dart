@@ -1,18 +1,14 @@
-// void main(){
-//  Set<String> fruits = {"Apple", "Orange", "Mango"};
+void main() {
+ 
+  Map<String, double> expenses = {
+    'sun': 3000.0,
+    'mon': 3000.0,
+    'tue': 3234.0,
+  };
   
-//   fruits.add("Lemon");
-//   fruits.add("Grape");
-  
-//   print("After Adding Lemon and Grape: $fruits");
-  
-//   fruits.remove("Apple");
-//   print("After Removing Apple: $fruits");
-// }
-
-
-void main(){
- Set<int> numbers = {10, 20, 30};
-  numbers.addAll([40,50]);
- print("After adding 40 and 50: $numbers");
-}    
+  print("All keys of Map: ${expenses.keys}");
+  print("All values of Map: ${expenses.values}");
+  print("Is Map empty: ${expenses.isEmpty}");
+  print("Is Map not empty: ${expenses.isNotEmpty}");
+  print("Length of map is: ${expenses.length}");
+}
