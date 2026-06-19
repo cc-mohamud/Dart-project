@@ -1,10 +1,9 @@
 import 'dart:io';
 
 void main() async{
-  File file = File("Notes.txt");
+  File file = File("Requirements.txt");
 
-  await file.writeAsString(
-    '\nI wrote in to Notes.txt without replacing existing content',
-    mode: FileMode.append
-  );
+  await file.delete();
+
+  print("Requirements.txt is Deleted!");
 }
