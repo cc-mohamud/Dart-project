@@ -2,7 +2,9 @@ import 'dart:io';
 
 void main() async{
   File file = File("Notes.txt");
-  String content = await file.readAsString();
 
-  print(content);
+  await file.writeAsString(
+    '\nI wrote in to Notes.txt without replacing existing content',
+    mode: FileMode.append
+  );
 }
