@@ -1,29 +1,18 @@
 void main() {
-  var dayOfWeek = 5;
-  switch (dayOfWeek) {
-    case 1:
-        print("Day is Sunday.");
-        break;
-    case 2:
-        print("Day is Monday.");
+  int seatNo = 01;
+
+  switch(seatNo){
+    case 01:
+      print("is for basel");
       break;
-    case 3:
-      print("Day is Tuesday.");
+    case 02:
+      print("is for daud");
       break;
-    case 4:
-        print("Day is Wednesday.");
-      break;
-    case 5:
-        print("Day is Thursday.");
-      break;
-    case 6:
-        print("Day is Friday.");
-      break;
-    case 7:
-        print("Day is Saturday.");
+    case 03:
+      print("is for halidi");
       break;
     default:
-        print("Invalid Weekday.");
-      break;
-  }
+      print("wrong seat");
+    break;
+  };
 }
