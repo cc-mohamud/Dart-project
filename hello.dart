@@ -1,3 +1,4 @@
 void main() { 
-   print("Hello World!"); 
+  dynamic height = "nprnal";
+  print("Hello $height");
 }
