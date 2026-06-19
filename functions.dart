@@ -1,10 +1,12 @@
-int? sum(int a, int b) {
-  int total = a + b;
-  return
-    total;
-  
-}
+double calculateInterest(double principle, double rate, double time) => 
+  principle * rate * time / 100;
 
-void main() {
-  print("Total is: ${sum(56, 65)}");
-}
+
+  void main() {
+    double principle = 50000;
+    double rate = 3;
+    double time = 5;
+
+    double result = calculateInterest(principle, rate, time);
+    print("The simple interest is: $result");
+  }
