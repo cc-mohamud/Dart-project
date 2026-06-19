@@ -1,12 +1,6 @@
-void main(){
+void main() {
+  List<String> names = ["Basel", "Halidi", "Aliyu", "Daud"];
 
-  int total = 0;
-  int n = 100; 
-  
-  for(int i=1; i<=n; i++){
-    total = total + i;
-  }
-  
-  print("Total is $total");
-  
+  names.forEach((names) =>
+    print(names));
 }
