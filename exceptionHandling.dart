@@ -1,13 +1,17 @@
-void main() {
-  try {
-    check_account(-10);
-  } catch (e) {
-    print('The account cannot be negative');
+class MarkException implements Exception {
+  String errorMessage() {
+    return 'Marks cannot be negative value.';
   }
 }
 
-void check_account(int amount) {
-  if (amount < 0) {
-    throw new FormatException(); // Raising explanation externally
+void main() {
+  try {
+    checkMarks(-20);
+  } catch (ex) {
+    print(ex.toString());
   }
+}
+
+void checkMarks(int marks) {
+  if (marks < 0) throw MarkException().errorMessage();
 }
