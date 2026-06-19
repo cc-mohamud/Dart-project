@@ -1,22 +1,18 @@
-// void main() {  
-//    var list1 = [210,21,22,33,44,55];  
-//    print(list1);  
-// }  
+// void main(){
+//  Set<String> fruits = {"Apple", "Orange", "Mango"};
+  
+//   fruits.add("Lemon");
+//   fruits.add("Grape");
+  
+//   print("After Adding Lemon and Grape: $fruits");
+  
+//   fruits.remove("Apple");
+//   print("After Removing Apple: $fruits");
+// }
 
 
-void main() {
-  var list = [210, 21, 22, 33, 44, 55];
-
-  print(list[0]);
-  print(list[1]);
-  print(list[2]);
-  print(list[3]);
-  print(list[4]);
-  print(list[5]);
-}
-
-
-
-
-
-
+void main(){
+ Set<int> numbers = {10, 20, 30};
+  numbers.addAll([40,50]);
+ print("After adding 40 and 50: $numbers");
+}    
