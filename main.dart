@@ -1,8 +1,6 @@
-void main() {
-    String age = "10";
+void main(){
 
-    age = int.parse(age);
+    String name = 'ccMohamud';
 
-    print(age);
-    
+    print(name.length);
 }
