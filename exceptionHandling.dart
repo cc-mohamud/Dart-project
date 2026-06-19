@@ -1,14 +1,13 @@
 void main() {
-  int a = 10;
-  int b = 0;
-  int result;
-
-
-  try{
-    result = a ~/ b;
-  print("result is $result");
-  } catch(ex){
-      print(ex);
+  try {
+    check_account(-10);
+  } catch (e) {
+    print('The account cannot be negative');
   }
+}
 
+void check_account(int amount) {
+  if (amount < 0) {
+    throw new FormatException(); // Raising explanation externally
+  }
 }
