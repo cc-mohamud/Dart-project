@@ -1,33 +1,25 @@
-class Student{
-  var _name;
-  var _email;
+class BankAccount {
+  double _balance = 0.0;
+  double get balance => this._balance;
 
-  String getName(){
-    return _name;
+  void deposit(double amount) {
+    this._balance += amount;
   }
 
-  String getEmail(){
-    return _email;
+  void withdraw(double amount) {
+    if (this._balance >= amount) {
+      this._balance -= amount;
+    } else {
+      throw new Exception("Insufficient Balance");
+    }
   }
-
-  void setName(String name){
-    this._name = name;
-  }
-
-  void setEmail(String email){
-    this._email = email;
-  }
-
 }
 
-
-void main () {
-  Student student = Student();
-
-  student.setName("ccMohamud");
-  student.setEmail("ccmohamud@yahoo.com");
-
-
-  print("Student Name is: ${student._name}");
-  print("Student Email is: ${student._email}");
+void main() {
+  BankAccount account = new BankAccount();
+  account.deposit(1000);
+  print("Balance after deposit: ${account.balance}");
+  
+  account.withdraw(500);
+  print("Balance after withdraw: ${account.balance}");
 }
