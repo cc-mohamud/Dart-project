@@ -1,20 +1,20 @@
-class Animal {
-      String? name;
-      int? numberOfLegs;
-      int? lifeSpan;
-    
-      void display() {
-        print("Animal name: $name.");
-        print("Number of Legs: $numberOfLegs.");
-        print("Life Span: $lifeSpan.");
-      }
-    }
+class Rectangle {
+  double? Length;
+  double? breadth;
 
-    void main(){
-        // Here animal is object of class Animal. 
-        Animal animal = Animal();
-        animal.name = "Lion";
-        animal.numberOfLegs = 4;
-        animal.lifeSpan = 10;
-        animal.display();
-    }
+  double area() {
+    return Length! * breadth!;
+  }
+}
+
+
+void main() {
+  Rectangle rectangle = Rectangle();
+
+
+  rectangle.Length = 5;
+  rectangle.breadth = 7;
+
+
+  print("The Area of Rectangle is: ${rectangle.area()}cm²");
+}
