@@ -1,36 +1,38 @@
-enum days {
-  Sunday,
-  Monday,
-  Tuesday,
-  Wednesday,
-  Thursday,
-  Friday,
-  Saturday
+abstract class Vehicle {
+  void start();
+  void stop();
+}
+
+class Car extends Vehicle {
+  @override
+  void start() {
+    print('Car started');
+  }
+
+  @override
+  void stop() {
+    print('Car stopped');
+  }
+}
+
+class Bike extends Vehicle {
+  @override
+  void start() {
+    print('Bike started');
+  }
+
+  @override
+  void stop() {
+    print('Bike stopped');
+  }
 }
 
 void main() {
-  var today = days.Wednesday;
-  switch (today) {
-    case days.Sunday:
-      print("Today is Sunday.");
-      break;
-    case days.Monday:
-      print("Today is Monday.");
-      break;
-    case days.Tuesday:
-      print("Today is Tuesday.");
-      break;
-    case days.Wednesday:
-      print("Today is Wednesday.");
-      break;
-    case days.Thursday:
-      print("Today is Thursday.");
-      break;
-    case days.Friday:
-      print("Today is Friday.");
-      break;
-    case days.Saturday:
-      print("Today is Saturday.");
-      break;
-  }
+  Car car = Car();
+  car.start();
+  car.stop();
+
+  Bike bike = Bike();
+  bike.start();
+  bike.stop();
 }
