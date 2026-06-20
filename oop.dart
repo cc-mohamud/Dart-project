@@ -1,25 +1,27 @@
-class Laptop {
-  var name;
-  var color;
+class Employee{
+  void salary(){
+    print("Employee salary is \$1000.");
+  }
+}
+
+class Manager extends Employee{
+  @override
+  void salary(){
+    print("Manager salary is \$2000.");
+  }
+}
+
+class Developer extends Employee{
+  @override
+  void salary(){
+    print("Developer salary is \$3000.");
+  }
+}
+
+void main(){
+  Manager manager=Manager();
+  Developer developer=Developer();
   
-  // Constructor
-  Laptop(this.name, this.color) {
-    print("Laptop constructor");
-    print("Name: $name");
-    print("Color: $color");
-  }
-}
-
-class MacBook extends Laptop {
-  // Constructor
-  MacBook(String name, String color) : super(name, color) {
-    print("MacBook constructor");
-  }
-}
-
-void main() {
-  var macbook = MacBook("MacBook Pro", "Silver");
-
-  print(macbook.name);
-  print(macbook.color);
+  manager.salary();
+  developer.salary();
 }
