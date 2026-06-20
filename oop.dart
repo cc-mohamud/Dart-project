@@ -1,21 +1,33 @@
-class Phone {
-  String? vendor;
-  String? model;
-  double? price;
+class Student{
+  var _name;
+  var _email;
 
-  Phone(String vendor, String model, double price){
-    print("Constructor is called");
-    this.vendor = vendor;
-    this.model = model;
-    this.price = price;
+  String getName(){
+    return _name;
   }
+
+  String getEmail(){
+    return _email;
+  }
+
+  void setName(String name){
+    this._name = name;
+  }
+
+  void setEmail(String email){
+    this._email = email;
+  }
+
 }
 
 
-void main() {
-  Phone phone = Phone("SAMSUNG", "S26 Ultra", 1700);
-  print(phone.vendor);
-  print(phone.model);
-  print(phone.price);
+void main () {
+  Student student = Student();
 
+  student.setName("ccMohamud");
+  student.setEmail("ccmohamud@yahoo.com");
+
+
+  print("Student Name is: ${student._name}");
+  print("Student Email is: ${student._email}");
 }
