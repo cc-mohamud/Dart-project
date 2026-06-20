@@ -1,20 +1,21 @@
-class Rectangle {
-  double? Length;
-  double? breadth;
+class Phone {
+  String? vendor;
+  String? model;
+  double? price;
 
-  double area() {
-    return Length! * breadth!;
+  Phone(String vendor, String model, double price){
+    print("Constructor is called");
+    this.vendor = vendor;
+    this.model = model;
+    this.price = price;
   }
 }
 
 
 void main() {
-  Rectangle rectangle = Rectangle();
+  Phone phone = Phone("SAMSUNG", "S26 Ultra", 1700);
+  print(phone.vendor);
+  print(phone.model);
+  print(phone.price);
 
-
-  rectangle.Length = 5;
-  rectangle.breadth = 7;
-
-
-  print("The Area of Rectangle is: ${rectangle.area()}cm²");
 }
