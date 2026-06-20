@@ -1,23 +1,28 @@
-
-abstract class Vehicle {
-  void start();
-  void stop();
+mixin CanFly {
+  void fly() {
+    print('I can fly');
+  }
 }
 
-class Car implements Vehicle {
-  @override
-  void start() {
-    print('Car started');
+mixin CanWalk {
+  void walk() {
+    print('I can walk');
   }
+}
 
-  @override
-  void stop() {
-    print('Car stopped');
-  }
+class Bird with CanFly, CanWalk {
+ 
+}
+
+class Human with CanWalk {
+ 
 }
 
 void main() {
-  var car = Car();
-  car.start();
-  car.stop();
+  var bird = Bird();
+  bird.fly();
+  bird.walk();
+
+  var human = Human();
+  human.walk();
 }
