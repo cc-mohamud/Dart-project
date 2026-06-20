@@ -1,27 +1,18 @@
-class Employee{
-  void salary(){
-    print("Employee salary is \$1000.");
+class Student {
+  int id;
+  String name;
+  static String schoolName = "ABC School";
+  Student(this.id, this.name);
+  void display() {
+    print("Id: ${this.id}");
+    print("Name: ${this.name}");
+    print("School Name: ${Student.schoolName}");
   }
 }
 
-class Manager extends Employee{
-  @override
-  void salary(){
-    print("Manager salary is \$2000.");
-  }
-}
-
-class Developer extends Employee{
-  @override
-  void salary(){
-    print("Developer salary is \$3000.");
-  }
-}
-
-void main(){
-  Manager manager=Manager();
-  Developer developer=Developer();
-  
-  manager.salary();
-  developer.salary();
+void main() {
+  Student s1 = new Student(1, "John");
+  s1.display();
+  Student s2 = new Student(2, "Smith");
+  s2.display();
 }
