@@ -1,25 +1,33 @@
-class BankAccount {
-  double _balance = 0.0;
-  double get balance => this._balance;
+class Person {
+  String? name;
+  int? age;
 
-  void deposit(double amount) {
-    this._balance += amount;
-  }
-
-  void withdraw(double amount) {
-    if (this._balance >= amount) {
-      this._balance -= amount;
-    } else {
-      throw new Exception("Insufficient Balance");
-    }
+  void display(){
+    print("Name: $name");
+    print("Age: $age");
   }
 }
 
+class Student extends Person {
+  String? schoolName;
+  String? schoolAddres;
+
+
+  void displaySchoolInfo() {
+    print("School Name: $schoolName");
+    print("School Address: $schoolAddres");
+  }
+}
+
+
 void main() {
-  BankAccount account = new BankAccount();
-  account.deposit(1000);
-  print("Balance after deposit: ${account.balance}");
-  
-  account.withdraw(500);
-  print("Balance after withdraw: ${account.balance}");
+  Student student1 = Student();
+
+  student1.name = "Sharif";
+  student1.age = 21;
+  student1.schoolName = "Mbale Secondary School";
+  student1.schoolAddres = "Mbale Nkome";
+
+  student1.display();
+  student1.displaySchoolInfo();
 }
