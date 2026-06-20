@@ -1,33 +1,25 @@
-class Person {
-  String? name;
-  int? age;
-
-  void display(){
+class Laptop {
+  var name;
+  var color;
+  
+  // Constructor
+  Laptop(this.name, this.color) {
+    print("Laptop constructor");
     print("Name: $name");
-    print("Age: $age");
+    print("Color: $color");
   }
 }
 
-class Student extends Person {
-  String? schoolName;
-  String? schoolAddres;
-
-
-  void displaySchoolInfo() {
-    print("School Name: $schoolName");
-    print("School Address: $schoolAddres");
+class MacBook extends Laptop {
+  // Constructor
+  MacBook(String name, String color) : super(name, color) {
+    print("MacBook constructor");
   }
 }
-
 
 void main() {
-  Student student1 = Student();
+  var macbook = MacBook("MacBook Pro", "Silver");
 
-  student1.name = "Sharif";
-  student1.age = 21;
-  student1.schoolName = "Mbale Secondary School";
-  student1.schoolAddres = "Mbale Nkome";
-
-  student1.display();
-  student1.displaySchoolInfo();
+  print(macbook.name);
+  print(macbook.color);
 }
