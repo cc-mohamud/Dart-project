@@ -1,9 +1,10 @@
+
 abstract class Vehicle {
   void start();
   void stop();
 }
 
-class Car extends Vehicle {
+class Car implements Vehicle {
   @override
   void start() {
     print('Car started');
@@ -15,24 +16,8 @@ class Car extends Vehicle {
   }
 }
 
-class Bike extends Vehicle {
-  @override
-  void start() {
-    print('Bike started');
-  }
-
-  @override
-  void stop() {
-    print('Bike stopped');
-  }
-}
-
 void main() {
-  Car car = Car();
+  var car = Car();
   car.start();
   car.stop();
-
-  Bike bike = Bike();
-  bike.start();
-  bike.stop();
 }
