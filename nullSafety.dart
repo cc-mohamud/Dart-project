@@ -1,26 +1,11 @@
-class Profile {
-  String? name;
-  String? bio;
-
-  Profile(this.name, this.bio);
-
-  void printProfile() {
-    print("Name: ${name ?? "Unknown"}");
-    print("Bio: ${bio ?? "None provided"}");
-  }
+void main(){
+String result;
+if(DateTime.now().hour < 12) {
+  result = "Good Morning";
+} else {
+  result = "Good Afternoon";
 }
 
-void main() {
-  
-  Profile profile1 = Profile("ccMohamud", "Software engineer and avid reader");
-  profile1.printProfile();
-
-  Profile profile2 = Profile("waneloba Albert", null);
-  profile2.printProfile();
-
-  Profile profile3 = Profile(null, "Loves to travel and try new foods");
-  profile3.printProfile();
-
-  Profile profile4 = Profile(null, null);
-  profile4.printProfile();
+print("Result is $result");
+print("Length of result is ${result.length}");
 }
