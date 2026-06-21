@@ -1,11 +1,20 @@
-void main(){
-String result;
-if(DateTime.now().hour < 12) {
-  result = "Good Morning";
-} else {
-  result = "Good Afternoon";
+class Person {
+  late String fullName = _getFullName();
+  late String firstName = fullName.split(" ").first;
+  late String lastName = fullName.split(" ").last;
+
+
+  String _getFullName() {
+    print("_getFullName is called");
+    return "John Doe";
+  }
 }
 
-print("Result is $result");
-print("Length of result is ${result.length}");
+void main() {
+  print("Start");
+  Person person = Person();
+  print("First Name: ${person.firstName}");
+  print("Last Name: ${person.lastName}");
+  print("Full Name: ${person.fullName}");
+  print("End");
 }
