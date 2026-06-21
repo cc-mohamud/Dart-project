@@ -1,14 +1,20 @@
-void main() {
+main() {
   print("Start");
   getData();
   print("End");
 }
 
+
 void getData() async{
-  String data = await middleFunction();
-  print(data);
+    try{
+        String data = await middleFunction();
+        print(data);
+    }catch(err){
+        print("Some error $err");
+    }
+ 
 }
 
 Future<String> middleFunction(){
-  return Future.delayed(Duration(seconds:5), ()=> "ccMohamud");
+  return Future.delayed(Duration(seconds:5), ()=> "Hello");
 }
